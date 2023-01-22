@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
+/*
 class Square extends React.Component {
     render() {
       return (
@@ -14,7 +14,17 @@ class Square extends React.Component {
       );
     }
   }
-  
+  */
+function Square(props){
+  return (
+    <button 
+      className = "square"
+      onClick = {()=> this.props.onClick()}
+      >
+        {this.props.value}
+      </button>
+  )
+}
   class Board extends React.Component {
     renderSquare(i) {
       return (<Square 
@@ -26,7 +36,7 @@ class Square extends React.Component {
     handleClick(i){
         const squares = this.state.squares.slice();
         squares[i] = 'X';
-        this.setState({squares:squares});   
+        this.setState({squares:squares});       
     }
     constructor(props){
         super(props);
