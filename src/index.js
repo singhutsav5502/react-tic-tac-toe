@@ -32,9 +32,7 @@ function Square(props){
         onClick={() => this.props.onClick(i)}
         />
       );
-    }
-
-  
+    } 
     render() {
       return (
         <div>
